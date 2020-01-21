@@ -1,0 +1,45 @@
+<div>
+  <div style="background-color:blue">
+    <img [src]="images" alt="" />
+  </div>
+  <div class="animinated">
+    <nav mat-tab-nav-bar mat-align-tabs="end">
+      <a mat-tab-link [routerLink]="['/dashboard/homes']" routerLinkActive #rla1="routerLinkActive"
+        [active]="rla1.isActive">
+        HOME
+      </a>
+      <a mat-tab-link [routerLink]="['/dashboard/matches']" routerLinkActive #rla2="routerLinkActive"
+        [active]="rla2.isActive" [matMenuTriggerFor]="match" #matchTrigger="matMenuTrigger"
+        (mouseover)="matchTrigger.openMenu()">
+        MATCHES
+      </a>
+      <a mat-tab-link [routerLink]="['/dashboard/players']" routerLinkActive #rla3="routerLinkActive"
+        [active]="rla3.isActive">
+        PLAYERS
+      </a>
+      <a mat-tab-link [routerLink]="['/dashboard/stastics']" routerLinkActive #rla4="routerLinkActive"
+        [active]="rla4.isActive">
+        STASTICS
+      </a>
+      <a mat-tab-link [routerLink]="['/dashboard/login']" routerLinkActive #rla5="routerLinkActive"
+        [active]="rla5.isActive">
+        LOGIN
+      </a>
+      <a mat-tab-link [routerLink]="['/dashboard/register']" routerLinkActive #rla6="routerLinkActive"
+        [active]="rla6.isActive">
+        REGISTER
+      </a>
+    </nav>
+  </div>
+</div>
+<mat-menu #match="matMenu" [overlapTrigger]="false">
+  <span (mouseleave)="matchTrigger.closeMenu()">
+    <a mat-menu-item [routerLink]="['/dashboard/matches/fixtures']" routerLinkActive="active">
+      FIXTURES
+    </a>
+    <a mat-menu-item [routerLink]="['/dashboard/matches/recent-results']" routerLinkActive="active">
+      RECENT RESULTS
+    </a>
+  </span>
+</mat-menu>
+<router-outlet></router-outlet>

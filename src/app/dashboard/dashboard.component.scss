@@ -1,0 +1,17 @@
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+.animinated {
+  background-color: lightskyblue;
+  -webkit-animation: mymove 10s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 10s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@keyframes mymove {
+  from {
+    background-color: coral;
+  }
+  to {
+    background-color: yellowgreen;
+  }
+}
