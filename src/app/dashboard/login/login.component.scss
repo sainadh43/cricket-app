@@ -1,0 +1,24 @@
+
+mat-card {
+  width: 650px;
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  vertical-align: middle;
+  height: 100%;
+}
+
+mat-card-header {
+   background-color: skyblue;
+  justify-content: center
+}
+
+
+a{
+  color:blue;
+  font-size: larger;
+}
