@@ -1,0 +1,63 @@
+<div fxFlexFill fxLayout="column">
+  <div fxFlex="10">
+    <mat-toolbar style="background-color:rgb(71, 71, 204);color: whitesmoke;">ADD PLAYER</mat-toolbar>
+  </div>
+  <span fxFlex=8></span>
+  <div fxFlex="90" fxLayout="row" fxLayoutAlign="center" style="overflow: auto;" >
+    <div fxFlex="20">
+      <img class="playeriamge" [src]="playerimage" alt="">
+    </div>
+    <div fxLayout="column" fxFlex="70">
+      <div style="color: lightcoral;">
+        <mat-label> PLEASE ENTER BELOW FILEDS TO ADD PLAYER </mat-label>
+      </div> <br>
+      <div>
+        <form [formGroup]="addForm" fxLayout="column" fxLayoutAlign="space-around stretch">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Team Name</mat-label>
+            <input matInput formControlName="TeamName">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="Email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>PhoneNumber</mat-label>
+            <input matInput formControlName="PhoneNumber">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>ROLE</mat-label>
+            <input matInput formControlName="Role">
+          </mat-form-field>
+          <mat-label>Gender:</mat-label><br>
+          <mat-radio-group formControlName="Gender" fxLayoutGap=10>
+            <mat-radio-button value="Male"> Male </mat-radio-button>
+            <mat-radio-button value="Female"> Female </mat-radio-button>
+          </mat-radio-group> <br>
+          <mat-form-field appearance="outline">
+            <mat-label>ADDRESS</mat-label>
+            <input matInput formControlName="address">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>CITY</mat-label>
+            <input matInput formControlName="city">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>STATE</mat-label>
+            <input matInput formControlName="state">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>ZipCODE</mat-label>
+            <input matInput formControlName="zipcode">
+          </mat-form-field>
+          <button mat-raised-button color="primary"> ADD </button>
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
