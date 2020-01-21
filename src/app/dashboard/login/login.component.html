@@ -1,1 +1,40 @@
-<p>login works!</p>
+<div fxLayout="column"  class="bgimg" fxFlexFill>
+  <div fxLayoutAlign="center center" class="section" fxLayout="column" fxFlex>
+    <span fxFlex=8></span>
+    <div fxFlex="10">
+      <label class="label1">Hey,good to see you again!</label>
+    </div>
+    <span fxFlex=2></span>
+    <div fxFlex="60">
+    <mat-card fxLayout="column">
+      <mat-card-header>
+        <mat-card-title>Login Here</mat-card-title>
+      </mat-card-header>
+      <span fxFlex=5></span>
+      <mat-card-content>
+        <form [formGroup]="loginForm" fxLayout="column" >
+          <mat-form-field appearance="outline" >
+            <mat-label>UserName or Email</mat-label>
+            <input matInput formControlName="UserName" >
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>password</mat-label>
+            <input matInput formControlName="password">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions align="center">
+        <button mat-raised-button style="background-color:  steelblue;">Login</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+    <span fxFlex=2></span>
+    <div fxLayout="column" fxFlex="30" align="center">
+      <a [routerLink]="['/dashboard/register']" routerLinkActive="router-link-active">Register</a>
+      <span fxFlex=5></span>
+      <a [routerLink]="['/dashboard/forget-password']" routerLinkActive="router-link-active" >ForgetPassword</a>
+      <!-- <button (click)="OnClick()">Register</button> -->
+    </div>
+  </div>
+</div>
+
