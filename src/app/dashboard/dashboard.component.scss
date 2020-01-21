@@ -1,17 +1,41 @@
-@import "~@angular/cdk/overlay-prebuilt.css";
-
-.animinated {
-  background-color: lightskyblue;
-  -webkit-animation: mymove 10s infinite; /* Chrome, Safari, Opera */
-  animation: mymove 10s infinite;
+.alignright {
+  background-color:lightskyblue;
+  //animation: mymove 5s infinite;
 }
 
-/* Chrome, Safari, Opera */
-@keyframes mymove {
-  from {
-    background-color: coral;
+/* standard syntax */
+// @keyframes mymove {
+//   from { background-color: olivedrab;}
+//   to {background-color: orchid;}
+// }
+
+
+.menu  {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  transition: all 1s ease-in-out 0s;
+  color: white;
+  font-family: Roboto,
+  "Helvetica Neue",
+  sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+   padding: 12px 15px;
   }
-  to {
-    background-color: yellowgreen;
-  }
+
+ a.menu:hover{
+  background: #423256;
+  border-left: 5px solid #2ea1cd;
+  padding-left: 25px;
+}
+
+::ng-deep .customize {
+  background-color:lightskyblue;
+}
+
+.router-div {
+  overflow: hidden;
+  width: 100%;
+  min-width: 1450px;
 }
