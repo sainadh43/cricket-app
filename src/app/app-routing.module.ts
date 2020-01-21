@@ -1,34 +1,38 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule, Routes } from "@angular/router";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { DashboardComponent } from "./dashboard/dashboard.componenet";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
+
   {
-    path: "dashboard",
-    loadChildren: () =>
-      import("./dashboard/dashboard.module").then(m => m.DashboardModule)
+    path: 'dashboard',
+    loadChildren: () => import ('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
-    path: "page-not-found",
+    path: 'page-not-found',
     component: PageNotFoundComponent
   },
   {
-    path: "",
-    redirectTo: "dashboard",
-    pathMatch: "full"
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
   {
-    path: "**",
-    redirectTo: "page-not-found",
-    pathMatch: "full"
+    path: '**',
+    redirectTo: 'page-not-found',
+    pathMatch: 'full'
   }
-];
-
+ ];
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
